@@ -1,0 +1,15 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  &__part {
+    color: $accent-color;
+  }
+  &__light-part {
+    color: $wite-color;
+  }
+}
