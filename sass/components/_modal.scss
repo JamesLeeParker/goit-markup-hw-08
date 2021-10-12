@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
 
-  width: 528px;
+  width: 450px;
   height: 581px;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -15,6 +15,10 @@
   transform: scale(1) translate(-50%, -50%);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 
   &__btn-close {
     position: absolute;
@@ -148,11 +152,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-
-  font-size: 14px;
+  @include font(12px, 0.03em, 400);
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 0.03em, 400);
+  }
 
   &__fild {
     appearance: none;

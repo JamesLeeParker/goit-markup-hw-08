@@ -132,7 +132,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 450px;
+    width: 430px;
     height: 50px;
     margin-bottom: 20px;
     padding-left: 16px;
@@ -143,6 +143,10 @@
 
     background-color: $background-color;
     color: $wite-color;
+
+    @media screen and (max-width: 430px) {
+      width: 300px;
+    }
 
     @media screen and (min-width: 1200px) {
       margin-left: 0;
