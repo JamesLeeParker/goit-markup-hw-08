@@ -4,8 +4,6 @@
   background-color: $background-color;
 
   &__block {
-    outline: 1px solid orange;
-
     @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-around;
@@ -14,6 +12,7 @@
 
     @media screen and (min-width: 1200px) {
       margin-bottom: 0;
+      justify-content: start;
     }
   }
 
@@ -25,9 +24,6 @@
 
   &__social-net {
     margin-bottom: $section-padding;
-
-    @media screen and (min-width: 768px) {
-    }
   }
 }
 
@@ -35,8 +31,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: $section-padding;
 
   @media screen and (min-width: 768px) {
@@ -50,8 +44,6 @@
     margin-right: 70px;
   }
 
-  outline: 1px solid white;
-
   &__box {
     margin-top: 20px;
   }
@@ -63,7 +55,6 @@
     line-height: 1.71;
     @include font(14px, 0.03em, 400);
     display: block;
-    // width: 220px;
 
     &--light {
       color: $wite-color;
@@ -73,8 +64,6 @@
   &__item {
     margin-bottom: 9px;
     text-align: center;
-
-    outline: 1px solid yellow;
 
     @media screen and (min-width: 1200px) {
       text-align: left;
@@ -101,14 +90,20 @@
   @media screen and (min-width: 768px) {
     margin-top: 5px;
   }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 // ------------------------
 
 .footer-form {
-  width: 100%;
   margin-top: 12px;
-  // margin-left: 93px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -120,6 +115,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $wite-color;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &__fild {
@@ -145,6 +144,7 @@
     color: $wite-color;
 
     @media screen and (min-width: 1200px) {
+      margin-left: 0;
       margin-right: 12px;
       width: 358px;
     }

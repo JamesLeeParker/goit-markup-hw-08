@@ -1,14 +1,27 @@
 .header {
   border-bottom: 1px solid #c4c4c4;
 
-  &__menu {
-    @media screen and (max-width: 768px) {
-      display: none;
+  &__open-btn {
+    background-color: transparent;
+
+    &:hover {
+      fill: $accent-color;
     }
   }
 
+  // &__menu {
+  //   display: flex;
+  //   // margin-left: 88px;
+
+  //   outline: 1px solid blue;
+
+  //   @media screen and (max-width: 768px) {
+  //     display: none;
+  //   }
+  // }
+
   &__icon {
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 768px) {
       display: none;
     }
   }
@@ -16,20 +29,26 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
-  &__mobile {
+  &__block {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    // width: 100%;
+    outline: 1px solid green;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__list {
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 93px;
   }
 
   &__item {
@@ -54,9 +73,17 @@
 }
 
 .contacts {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  // display: flex;
+  // align-items: center;
+  // margin-left: 84px;
+
+  &__item {
+    margin-right: 0;
+
+    & + & {
+      margin-top: 10px;
+    }
+  }
 
   &__link {
     display: flex;
