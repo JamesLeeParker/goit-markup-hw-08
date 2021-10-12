@@ -1,6 +1,6 @@
 .client {
   &__list {
-    margin-right: -$indent;
+    margin-left: -$indent;
     margin-bottom: -$indent;
     display: flex;
     justify-content: center;
@@ -8,18 +8,20 @@
   }
 
   &__item {
-    margin-right: $indent;
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: $indent;
     margin-bottom: $indent;
 
     width: 210px;
     height: 92px;
 
     @media screen and (min-width: 768px) {
-      width: 226px;
+      flex-basis: calc(100% / 3 - 30px);
     }
 
     @media screen and (min-width: 1200px) {
       width: 170px;
+      flex-basis: calc(100% / 6 - 30px);
     }
   }
 

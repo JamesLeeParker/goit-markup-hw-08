@@ -2,14 +2,13 @@
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  width: 100vw;
 
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(../../../images/img/hero/bg-phone.jpg);
+    url(../images/img/hero/bg-phone.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $background-color;
@@ -23,7 +22,7 @@
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url(../../../images/img/hero/bg-phone@2x.jpg);
+      url(../images/img/hero/bg-phone@2x.jpg);
   }
 
   @media screen and (min-width: 1200px) {
@@ -35,7 +34,7 @@
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url(../../../images/img/hero/bg-desktop.jpg);
+      url(../images/img/hero/bg-desktop.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
@@ -46,7 +45,7 @@
           rgba(0, 0, 0, 0.4),
           rgba(0, 0, 0, 0.4)
         ),
-        url(../../../images/img/hero/bg-desktop@2x.jpg);
+        url(../images/img/hero/bg-desktop@2x.jpg);
     }
   }
 
