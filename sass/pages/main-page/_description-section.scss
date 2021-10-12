@@ -14,8 +14,6 @@
   &__item {
     max-width: 450px;
 
-    outline: 1px solid green;
-
     &:not(:last-child) {
       margin-bottom: $indent;
     }
