@@ -5,6 +5,7 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  @include font(24px, 00.03em, 700);
 
   &__part {
     color: $accent-color;

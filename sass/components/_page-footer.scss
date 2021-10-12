@@ -3,18 +3,54 @@
   padding-bottom: 60px;
   background-color: $background-color;
 
+  &__block {
+    outline: 1px solid orange;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: $section-padding;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
   &__box {
-    display: flex;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 
   &__social-net {
-    margin-top: 12px;
+    margin-bottom: $section-padding;
+
+    @media screen and (min-width: 768px) {
+    }
   }
 }
 
 .address {
-  margin-right: 70px;
-  min-width: 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: $section-padding;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-shrink: 0;
+    margin-right: 70px;
+  }
+
+  outline: 1px solid white;
 
   &__box {
     margin-top: 20px;
@@ -24,10 +60,10 @@
     font-family: Roboto, sans-serif;
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(14px, 0.03em, 400);
+    display: block;
+    // width: 220px;
 
     &--light {
       color: $wite-color;
@@ -36,6 +72,13 @@
 
   &__item {
     margin-bottom: 9px;
+    text-align: center;
+
+    outline: 1px solid yellow;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
 
     &:last-child {
       margin: 0;
@@ -47,12 +90,17 @@
 
 .social-net-footer__title {
   margin-bottom: 20px;
+  text-align: center;
 
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 3%;
   color: $wite-color;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 5px;
+  }
 }
 
 // ------------------------
@@ -60,10 +108,11 @@
 .footer-form {
   width: 100%;
   margin-top: 12px;
-  margin-left: 93px;
+  // margin-left: 93px;
 
   &__title {
     margin-bottom: 20px;
+    text-align: center;
 
     font-weight: 700;
     font-size: 14px;
@@ -74,14 +123,19 @@
   }
 
   &__fild {
-    display: flex;
-
-    margin-right: 12px;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 
   &__input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
     padding-left: 16px;
-    width: 358px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -89,11 +143,22 @@
 
     background-color: $background-color;
     color: $wite-color;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+      width: 358px;
+    }
   }
 
   &__btn {
     display: flex;
-    margin-left: 12px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     &:hover,
     &:focus {

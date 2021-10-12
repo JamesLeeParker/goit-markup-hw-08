@@ -1,32 +1,18 @@
 .client {
   &__list {
+    margin-right: -$indent;
+    margin-bottom: -$indent;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
 
   &__item {
+    margin-right: $indent;
+    margin-bottom: $indent;
+
     width: 210px;
     height: 92px;
-
-    @media screen and (min-width: 768px) {
-      margin-right: $indent;
-    }
-
-    &:nth-child(2n + 1) {
-      margin-right: $indent;
-
-      @media screen and (min-width: 768px) {
-      }
-    }
-
-    &:nth-child(-n + 4) {
-      margin-bottom: $indent;
-
-      @media screen and (min-width: 1200px) {
-        margin-bottom: 0;
-      }
-    }
 
     @media screen and (min-width: 768px) {
       width: 226px;
@@ -34,28 +20,6 @@
 
     @media screen and (min-width: 1200px) {
       width: 170px;
-    }
-
-    &:nth-child(3n) {
-      @media screen and (min-width: 768px) {
-        margin-right: 0;
-      }
-
-      @media screen and (min-width: 1200px) {
-        margin-right: $indent;
-      }
-    }
-
-    &:nth-child(4) {
-      @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-      }
-    }
-
-    &:last-child {
-      @media screen and (min-width: 1200px) {
-        margin-right: 0;
-      }
     }
   }
 

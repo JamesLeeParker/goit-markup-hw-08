@@ -488,19 +488,70 @@ img {
   background-color: #2f303a;
 }
 
-.footer__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.footer__block {
+  outline: 1px solid orange;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__block {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__social-net {
-  margin-top: 12px;
+  margin-bottom: 60px;
 }
 
 .address {
-  margin-right: 70px;
-  min-width: 231px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+  outline: 1px solid white;
+}
+
+@media screen and (min-width: 768px) {
+  .address {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 70px;
+  }
 }
 
 .address__box {
@@ -511,10 +562,11 @@ img {
   font-family: Roboto, sans-serif;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
+  font-size: 14px;
   letter-spacing: 0.03em;
+  font-weight: 400;
+  display: block;
 }
 
 .address__link--light {
@@ -523,6 +575,14 @@ img {
 
 .address__item {
   margin-bottom: 9px;
+  text-align: center;
+  outline: 1px solid yellow;
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item {
+    text-align: left;
+  }
 }
 
 .address__item:last-child {
@@ -531,6 +591,7 @@ img {
 
 .social-net-footer__title {
   margin-bottom: 20px;
+  text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.17;
@@ -538,14 +599,20 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .social-net-footer__title {
+    margin-top: 5px;
+  }
+}
+
 .footer-form {
   width: 100%;
   margin-top: 12px;
-  margin-left: 93px;
 }
 
 .footer-form__title {
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16.41 / 14);
@@ -554,16 +621,22 @@ img {
   color: #ffffff;
 }
 
-.footer-form__fild {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 12px;
+@media screen and (min-width: 1200px) {
+  .footer-form__fild {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer-form__input {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 450px;
+  height: 50px;
+  margin-bottom: 20px;
   padding-left: 16px;
-  width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -572,11 +645,26 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
 .footer-form__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .footer-form__btn:hover, .footer-form__btn:focus {
@@ -597,6 +685,9 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
 }
 
 .logo__part {
@@ -966,6 +1057,8 @@ img {
 }
 
 .client__list {
+  margin-right: -30px;
+  margin-bottom: -30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -977,28 +1070,10 @@ img {
 }
 
 .client__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
   width: 210px;
   height: 92px;
-}
-
-@media screen and (min-width: 768px) {
-  .client__item {
-    margin-right: 30px;
-  }
-}
-
-.client__item:nth-child(2n + 1) {
-  margin-right: 30px;
-}
-
-.client__item:nth-child(-n + 4) {
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 1200px) {
-  .client__item:nth-child(-n + 4) {
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1010,30 +1085,6 @@ img {
 @media screen and (min-width: 1200px) {
   .client__item {
     width: 170px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .client__item:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client__item:nth-child(3n) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .client__item:nth-child(4) {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client__item:last-child {
-    margin-right: 0;
   }
 }
 
@@ -1167,23 +1218,35 @@ img {
   padding-top: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .exemples {
+    margin-bottom: -30px;
+    margin-left: -30px;
+  }
+}
+
 .exemples__item {
   margin-bottom: 30px;
+  width: 100%;
   outline: 1px solid green;
 }
 
 @media screen and (min-width: 768px) {
   .exemples__item {
-    width: 354px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
   }
 }
 
-.exemples__item:last-child {
-  margin-bottom: 0;
-}
-
-.exemples__item:nth-child(2n - 2) {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .exemples__item {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .exemples__link {
@@ -1231,11 +1294,5 @@ img {
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: #ffffff;
-}
-
-@media screen and (min-width: 1200px) {
-  .exemples__item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
 }
 /*# sourceMappingURL=main.css.map */
